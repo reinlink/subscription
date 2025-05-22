@@ -213,5 +213,26 @@ export default defineAppConfig({
         '[text="开启个性化内容推荐"] +3 [id="tv.danmaku.bili:id/close_button"]',
       snapshotUrls: 'https://i.gkd.li/import/13448905',
     },
+    {
+  id: 'tv.danmaku.bili',
+  name: 'bili',
+  groups: [
+    {
+      key: 1,
+      name: '视频底下推荐广告',
+      activityIds: ['com.bilibili.ship.theseus.detail.UnitedBizDetailsActivity'], 
+      rules: [
+        {
+          matches: '[text="不感兴趣"]',
+          snapshotUrls: 'https://i.gkd.li/i/20397658',
+        },
+        {
+          matches: '[id$="/more_layout"]',
+          snapshotUrls: [
+            'https://i.gkd.li/i/20397311',
+          ],
+        },
+      ],
+    },
   ],
 });
